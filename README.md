@@ -4,7 +4,7 @@
 
 I build software end to end: backend services, web and mobile clients, data models, and the deployment and monitoring around them. I have 7+ years of experience, and this profile keeps growing as I add projects across more of that work.
 
-Each project says what it covers and where it stops. Together they carry 1,004 automated tests, and the ones that need a database or a queue run against the real service.
+Each project says what it covers and where it stops. Together they carry more than 1,600 automated tests, and the ones that need a database or a queue run against the real service.
 
 _These projects were built with AI assistance._
 
@@ -12,22 +12,28 @@ _These projects were built with AI assistance._
 
 | Project | What it shows |
 | --- | --- |
-| [offline-basket](https://github.com/usman-bk/offline-basket) | A cart that survives a dead signal: 200 offline actions, settled once |
-| [query-plans](https://github.com/usman-bk/query-plans) | Four queries fixed, including a textbook N+1 fix that ran 600 times slower |
-| [price-watch](https://github.com/usman-bk/price-watch) | One feature across a service, a mobile app and a web page, with a generated contract |
+| [clinic-slots](https://github.com/usman-bk/clinic-slots) | A clinic booking app where 50 patients pressing Book at once still get one appointment per slot |
+| [live-board](https://github.com/usman-bk/live-board) | A shared task board that replays exactly what you missed after a dropped connection, across two servers |
+| [payout-runs](https://github.com/usman-bk/payout-runs) | Seller payouts that pay once, even when a worker is killed mid transfer |
+| [table-state](https://github.com/usman-bk/table-state) | A data table for 50,000 rows where a slow old response can never overwrite newer data |
 
-## Mobile and clients
+## Web apps and clients
 
-- [push-fanout](https://github.com/usman-bk/push-fanout): one price drop to 40,000 devices, one notification per person
-- [mobile-bff](https://github.com/usman-bk/mobile-bff): payloads cut from 270 KB to 3.4 KB, with the budget enforced by a test
-- [ts-api-client](https://github.com/usman-bk/ts-api-client): the API client a mobile app uses, with single-flight refresh and full jitter
-
-## Reliability
-
-- [payout-runs](https://github.com/usman-bk/payout-runs): seller payouts that pay once, even when a worker is killed mid transfer
-- [seat-holds](https://github.com/usman-bk/seat-holds): a seat that cannot be sold twice, a group that gets all its seats or none, and a seat map that updates live
+- [form-schema](https://github.com/usman-bk/form-schema): a multi-step form built from a schema, with validation races, saved drafts and screen reader announcements
 - [shift-swaps](https://github.com/usman-bk/shift-swaps): a team rota where two approvals at the same moment cannot put one person on two shifts
 - [outage-notes](https://github.com/usman-bk/outage-notes): a public status page that stays up when the service it reports on is down, and never shows green because it could not check
+- [offline-basket](https://github.com/usman-bk/offline-basket): a cart that survives a dead signal: 200 offline actions, settled once
+- [price-watch](https://github.com/usman-bk/price-watch): one feature across a service, a mobile app and a web page, with a generated contract
+- [ts-api-client](https://github.com/usman-bk/ts-api-client): the API client a mobile app uses, with single-flight refresh and full jitter
+- [mobile-bff](https://github.com/usman-bk/mobile-bff): payloads cut from 270 KB to 3.4 KB, with the budget enforced by a test
+- [push-fanout](https://github.com/usman-bk/push-fanout): one price drop to 40,000 devices, one notification per person
+
+## Backend and reliability
+
+- [seat-holds](https://github.com/usman-bk/seat-holds): a seat that cannot be sold twice, a group that gets all its seats or none, and a seat map that updates live
+- [webhook-relay](https://github.com/usman-bk/webhook-relay): webhooks that keep retrying through restarts, signed, replay-protected and with a dead-letter list
+- [thumb-queue](https://github.com/usman-bk/thumb-queue): an image job queue with one output per image however often it is sent, and a clean drain on shutdown
+- [rate-limits](https://github.com/usman-bk/rate-limits): five rate limiters measured under 50 concurrent clients, including the one that admits double at a boundary
 - [release-watch](https://github.com/usman-bk/release-watch): a release that takes live traffic only as far as its measurements allow, and goes back by itself when they say no
 - [cache-stampede](https://github.com/usman-bk/cache-stampede): 2,000 origin calls collapsed into 1 when a popular key expires
 - [outbox](https://github.com/usman-bk/outbox): a database write and its published message that cannot disagree
@@ -36,9 +42,13 @@ _These projects were built with AI assistance._
 
 ## APIs and data
 
+- [fleet-logs](https://github.com/usman-bk/fleet-logs): a maintenance records API for many fleet companies, where no company can read another's data
+- [order-graph](https://github.com/usman-bk/order-graph): an API where hostile queries are refused and the N+1 problem is proven gone by counting statements
+- [query-plans](https://github.com/usman-bk/query-plans): four queries fixed, including a textbook N+1 fix that ran 600 times slower
 - [contract-checks](https://github.com/usman-bk/contract-checks): fails a pull request that would break an app already on a phone
 - [api-versioning](https://github.com/usman-bk/api-versioning): four live versions of one endpoint, pinned by golden files
 - [graded-catalogue](https://github.com/usman-bk/graded-catalogue): a marketplace where every unit is one of a kind
+- [answer-sources](https://github.com/usman-bk/answer-sources): answers from a document set that name the passages they used, with retrieval measured on a labelled set
 
 ## Contact
 
