@@ -4,19 +4,20 @@
 
 I build software end to end: backend services, web and mobile clients, data models, and the deployment and monitoring around them. I have 7+ years of experience, and this profile keeps growing as I add projects across more of that work.
 
-Each project says what it covers and where it stops. Together they carry more than 1,600 automated tests, and the ones that need a database or a queue run against the real service.
+Each project says what it covers and where it stops. Together they carry more than 2,100 automated tests, and the ones that need a database or a queue run against the real service.
 
-I work in **Python, Go and TypeScript** (React and Node.js). Projects are grouped by language below.
+I work in **Python, Go, TypeScript** (React and Node.js) and **Java**. Projects are grouped by language below.
 
 _These projects were built with AI assistance._
 
-**Jump to:** [Python](#python) · [Go](#go) · [React and front end](#react-and-front-end) · [Node.js and TypeScript back end](#nodejs-and-typescript-back-end)
+**Jump to:** [Python](#python) · [Go](#go) · [React and front end](#react-and-front-end) · [Node.js and TypeScript back end](#nodejs-and-typescript-back-end) · [Java](#java) · [Infrastructure](#infrastructure)
 
 ## Python
 
 FastAPI, Django, Django REST Framework, Celery, SQLAlchemy, PostgreSQL, Redis. [Show only these projects](https://github.com/VirkUsman?tab=repositories&language=python)
 
 - [payout-runs](https://github.com/VirkUsman/payout-runs): seller payouts that pay once, even when a worker is killed mid transfer
+- [trace-lab](https://github.com/VirkUsman/trace-lab): a service with traces, metrics, a dashboard and burn-rate alerts that are tested against each other
 - [seat-holds](https://github.com/VirkUsman/seat-holds): a seat that cannot be sold twice, a group that gets all its seats or none, and a seat map that updates live
 - [webhook-relay](https://github.com/VirkUsman/webhook-relay): webhooks that keep retrying through restarts, signed, replay-protected and with a dead-letter list
 - [rate-limits](https://github.com/VirkUsman/rate-limits): five rate limiters measured under 50 concurrent clients, including the one that admits double at a boundary
@@ -28,6 +29,7 @@ FastAPI, Django, Django REST Framework, Celery, SQLAlchemy, PostgreSQL, Redis. [
 PostgreSQL with pgx, Redis, RabbitMQ, Protobuf, Kubernetes. [Show only these projects](https://github.com/VirkUsman?tab=repositories&language=go)
 
 - [outbox](https://github.com/VirkUsman/outbox): a database write and its published message that cannot disagree
+- [edge-grpc](https://github.com/VirkUsman/edge-grpc): a gRPC price feed with streaming in both directions, deadlines, interceptors and a shutdown that drains open streams
 - [push-fanout](https://github.com/VirkUsman/push-fanout): one price drop to 40,000 devices, one notification per person
 - [cache-stampede](https://github.com/VirkUsman/cache-stampede): 2,000 origin calls collapsed into 1 when a popular key expires
 - [query-plans](https://github.com/VirkUsman/query-plans): four queries fixed, including a textbook N+1 fix that ran 600 times slower
@@ -43,6 +45,7 @@ PostgreSQL with pgx, Redis, RabbitMQ, Protobuf, Kubernetes. [Show only these pro
 React, Next.js, Redux, Vue, Vite, Tailwind CSS, React Native. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=react)
 
 - [clinic-slots](https://github.com/VirkUsman/clinic-slots): A clinic booking app where 50 patients pressing Book at once still get one appointment per slot
+- [ledger-next](https://github.com/VirkUsman/ledger-next): a shared-expense ledger in Next.js where the money maths is in integer cents and settle-up is tested end to end
 - [table-state](https://github.com/VirkUsman/table-state): A data table for 50,000 rows where a slow old response can never overwrite newer data
 - [form-schema](https://github.com/VirkUsman/form-schema): a multi-step form built from a schema, with validation races, saved drafts and screen reader announcements
 - [live-board](https://github.com/VirkUsman/live-board): A shared task board that replays exactly what you missed after a dropped connection, across two servers
@@ -56,9 +59,22 @@ React, Next.js, Redux, Vue, Vite, Tailwind CSS, React Native. [Show only these p
 Express, MongoDB, GraphQL, PostgreSQL, Redis, BullMQ. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=nodejs)
 
 - [fleet-logs](https://github.com/VirkUsman/fleet-logs): a maintenance records API for many fleet companies, where no company can read another's data
+- [order-stream](https://github.com/VirkUsman/order-stream): orders over Kafka where a duplicate delivery is ignored, a poison message goes to a dead-letter topic and a crash resumes cleanly
 - [order-graph](https://github.com/VirkUsman/order-graph): an API where hostile queries are refused and the N+1 problem is proven gone by counting statements
 - [app-session](https://github.com/VirkUsman/app-session): refresh token rotation where a stolen token ends the whole family
 - [thumb-queue](https://github.com/VirkUsman/thumb-queue): an image job queue with one output per image however often it is sent, and a clean drain on shutdown
+
+## Java
+
+Spring Boot, JPA, Flyway, MySQL, Testcontainers. [Show only these projects](https://github.com/VirkUsman?tab=repositories&language=java)
+
+- [quote-service](https://github.com/VirkUsman/quote-service): freight quotes with versioned rate tables, where sixteen simultaneous accepts produce exactly one
+
+## Infrastructure
+
+Terraform, AWS, Prometheus, Grafana, OpenTelemetry. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=terraform)
+
+- [stack-forge](https://github.com/VirkUsman/stack-forge): Terraform modules for a small AWS service, tested with mock providers and a plan checker
 
 ## Contact
 
