@@ -6,11 +6,11 @@ I build software end to end: backend services, web and mobile clients, data mode
 
 Each project says what it covers and where it stops. Together they carry more than 2,300 automated tests, and the ones that need a database or a queue run against the real service.
 
-I work in **Python, Go, TypeScript** (React and Node.js) and **Java**. Projects are grouped by language below.
+I work in **Python, Go, TypeScript** (React and Node.js), **Java** and **Kotlin**. Projects are grouped by language below.
 
 _These projects were built with AI assistance._
 
-**Jump to:** [Python](#python) · [Go](#go) · [React and front end](#react-and-front-end) · [Node.js and TypeScript back end](#nodejs-and-typescript-back-end) · [Java](#java) · [Infrastructure](#infrastructure)
+**Jump to:** [Python](#python) · [Go](#go) · [React and front end](#react-and-front-end) · [Node.js and TypeScript back end](#nodejs-and-typescript-back-end) · [Java and Kotlin](#java-and-kotlin) · [Data](#data) · [Infrastructure](#infrastructure)
 
 ## Python
 
@@ -66,19 +66,28 @@ Express, MongoDB, GraphQL, Elasticsearch, PostgreSQL, Redis, BullMQ. [Show only 
 - [app-session](https://github.com/VirkUsman/app-session): refresh token rotation where a stolen token ends the whole family
 - [thumb-queue](https://github.com/VirkUsman/thumb-queue): an image job queue with one output per image however often it is sent, and a clean drain on shutdown
 
-## Java
+## Java and Kotlin
 
-Spring Boot, JPA, Flyway, MySQL, Testcontainers. [Show only these projects](https://github.com/VirkUsman?tab=repositories&language=java)
+Spring Boot, Ktor, JPA, Flyway, MySQL, PostgreSQL, Testcontainers. [Java projects](https://github.com/VirkUsman?tab=repositories&language=java) · [Kotlin projects](https://github.com/VirkUsman?tab=repositories&language=kotlin)
 
 - [quote-service](https://github.com/VirkUsman/quote-service): freight quotes with versioned rate tables, where sixteen simultaneous accepts produce exactly one
+- [invoice-kt](https://github.com/VirkUsman/invoice-kt): invoicing in Kotlin and Ktor, where two payments racing on one invoice can never overpay it
+
+## Data
+
+Airflow, dbt, PySpark, DuckDB, Parquet. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=data-engineering)
+
+- [trip-warehouse](https://github.com/VirkUsman/trip-warehouse): a batch trip pipeline where every injected bad row and duplicate is caught and counted, from PySpark through dbt tests
 
 ## Infrastructure
 
-Terraform, AWS, Azure, Bicep, Helm, Kubernetes, Prometheus, Grafana, OpenTelemetry. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=terraform)
+Terraform, Pulumi, Ansible, AWS, Azure, Google Cloud, Bicep, Helm, Kubernetes, Prometheus, Grafana, OpenTelemetry. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=terraform)
 
 - [stack-forge](https://github.com/VirkUsman/stack-forge): Terraform modules for a small AWS service, tested with mock providers and a plan checker
 - [chart-kit](https://github.com/VirkUsman/chart-kit): a Helm chart that installs, upgrades and rolls back on a real kind cluster, with a values schema that refuses bad settings
 - [az-pipeline](https://github.com/VirkUsman/az-pipeline): invoice intake on Azure Functions, where each upload is processed once and failures land in a poison queue, tested against Azurite
+- [gcp-intake](https://github.com/VirkUsman/gcp-intake): order intake for Cloud Run on Firestore and Pub/Sub, where a redelivered message never creates a second order, tested on the emulators
+- [host-bootstrap](https://github.com/VirkUsman/host-bootstrap): a Pulumi fleet definition with tests that refuse open SSH, and Ansible roles that converge twice with nothing changed
 
 ## Contact
 
