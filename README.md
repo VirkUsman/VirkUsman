@@ -4,7 +4,7 @@
 
 I build software end to end: backend services, web and mobile clients, data models, and the deployment and monitoring around them. I have 7+ years of experience, and this profile keeps growing as I add projects across more of that work.
 
-Each project says what it covers and where it stops. Together they carry more than 2,100 automated tests, and the ones that need a database or a queue run against the real service.
+Each project says what it covers and where it stops. Together they carry more than 2,300 automated tests, and the ones that need a database or a queue run against the real service.
 
 I work in **Python, Go, TypeScript** (React and Node.js) and **Java**. Projects are grouped by language below.
 
@@ -14,9 +14,10 @@ _These projects were built with AI assistance._
 
 ## Python
 
-FastAPI, Django, Django REST Framework, Celery, SQLAlchemy, PostgreSQL, Redis. [Show only these projects](https://github.com/VirkUsman?tab=repositories&language=python)
+FastAPI, Django, Django REST Framework, Celery, SQLAlchemy, PostgreSQL, MySQL, Redis. [Show only these projects](https://github.com/VirkUsman?tab=repositories&language=python)
 
 - [payout-runs](https://github.com/VirkUsman/payout-runs): seller payouts that pay once, even when a worker is killed mid transfer
+- [shop-django](https://github.com/VirkUsman/shop-django): a shop checkout where 16 buyers racing for 5 units produce exactly 5 orders, with expired holds released by Celery
 - [trace-lab](https://github.com/VirkUsman/trace-lab): a service with traces, metrics, a dashboard and burn-rate alerts that are tested against each other
 - [seat-holds](https://github.com/VirkUsman/seat-holds): a seat that cannot be sold twice, a group that gets all its seats or none, and a seat map that updates live
 - [webhook-relay](https://github.com/VirkUsman/webhook-relay): webhooks that keep retrying through restarts, signed, replay-protected and with a dead-letter list
@@ -56,10 +57,11 @@ React, Next.js, Redux, Vue, Vite, Tailwind CSS, React Native. [Show only these p
 
 ## Node.js and TypeScript back end
 
-Express, MongoDB, GraphQL, PostgreSQL, Redis, BullMQ. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=nodejs)
+Express, MongoDB, GraphQL, Elasticsearch, PostgreSQL, Redis, BullMQ. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=nodejs)
 
 - [fleet-logs](https://github.com/VirkUsman/fleet-logs): a maintenance records API for many fleet companies, where no company can read another's data
 - [order-stream](https://github.com/VirkUsman/order-stream): orders over Kafka where a duplicate delivery is ignored, a poison message goes to a dead-letter topic and a crash resumes cleanly
+- [search-desk](https://github.com/VirkUsman/search-desk): product search on Elasticsearch with a hand-judged query set that fails the build if relevance drops
 - [order-graph](https://github.com/VirkUsman/order-graph): an API where hostile queries are refused and the N+1 problem is proven gone by counting statements
 - [app-session](https://github.com/VirkUsman/app-session): refresh token rotation where a stolen token ends the whole family
 - [thumb-queue](https://github.com/VirkUsman/thumb-queue): an image job queue with one output per image however often it is sent, and a clean drain on shutdown
@@ -72,9 +74,11 @@ Spring Boot, JPA, Flyway, MySQL, Testcontainers. [Show only these projects](http
 
 ## Infrastructure
 
-Terraform, AWS, Prometheus, Grafana, OpenTelemetry. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=terraform)
+Terraform, AWS, Azure, Bicep, Helm, Kubernetes, Prometheus, Grafana, OpenTelemetry. [Show only these projects](https://github.com/VirkUsman?tab=repositories&q=terraform)
 
 - [stack-forge](https://github.com/VirkUsman/stack-forge): Terraform modules for a small AWS service, tested with mock providers and a plan checker
+- [chart-kit](https://github.com/VirkUsman/chart-kit): a Helm chart that installs, upgrades and rolls back on a real kind cluster, with a values schema that refuses bad settings
+- [az-pipeline](https://github.com/VirkUsman/az-pipeline): invoice intake on Azure Functions, where each upload is processed once and failures land in a poison queue, tested against Azurite
 
 ## Contact
 
